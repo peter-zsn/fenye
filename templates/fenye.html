@@ -1,0 +1,28 @@
+{% block title %}
+分页
+{% endblock %}
+
+{% block css %}
+
+{% endblock %}
+
+{% block body %}
+<table>
+    <tr>
+        <th>id</th>
+        <th>value</th>
+    </tr>
+
+{% for obj in data %}
+    <tr>
+    <td>{{ obj.id }}</td>
+    <td>{{ obj.value }}</td>
+    </tr>
+{% endfor %}
+</table>
+{{ page_url | safe }}
+{% endblock %}
+
+{% block js %}
+
+{% endblock %}
