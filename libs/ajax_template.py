@@ -115,7 +115,7 @@ def jsonp_ok(request, data='', next=None, message=None):
     add_headers(request, body)
     r = HttpResponse(simplejson.dumps(data, cls=XJSONEncoder, endcoding='utf-8'))
     r['Content-Type'] = 'application/javascript'
-    return r
+    return HttpResponse(r)
 
 def jsonp_fail(request, data='', next=None, message=None):
     body = ajax_data('fail', data=data, next=next, message=message)

@@ -6,7 +6,7 @@
 @file: views.py
 @time: 2017/7/18 17:00
 """
-from libs.ajax_template import render_template, ajax_ok
+from libs.ajax_template import render_template, ajax_ok, jsonp_ok
 from apps.common import get_page_url
 
 def page(request):
